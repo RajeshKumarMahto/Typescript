@@ -1,63 +1,13 @@
-export {};
+export{};
 
-//Array declarations
+//Different array methods
+//1. concat() method: USed to merge 2 or more arrays. The method does not changes the existing arrays but instead return new array.
+const array1: string[]= ['a', 'b', 'c'];
+const array2: string[]= ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+console.log(array1);
+console.log(array2);
+console.log(array3);
 
-//1. Number array
-let ids: number[]= [0.1, 12, 12, 12];
-// console.log(ids);
-//2. string array
-let names: string[] = ["Raj", "Ram", "Sam", "Atharv"];
-console.log(names);
-//3. Boolean array
-let isOlder: boolean[] = [true, false, true];
-// console.log(isOlder);
-//4. Union Type array
-let mixedArray: (number|string|boolean)[] = [1, 'Raj', 2, 'Ramesh', false];
-// console.log(mixedArray);
-
-//Access elements from an array
-//1. Using index
-// console.log(ids[0]);
-// console.log(ids[2]);
-// //2. Using forof loop
-// for (const el of ids) {
-//     console.log(el);
-// }
-//3. foreach loop
-// mixedArray.forEach(element => {
-//     console.log(element);
-// });
-//4. using for in loop
-// for (const key in mixedArray) {
-//     console.log(mixedArray[key]);
-// }
-
-//Insertion in array
-
-//1. at the last
-// names.push("Ramesh");
-// names.push("Vishal");
-// names.push("Jogindar", "Kalwa");
-// console.log(names);
-
-//2. At the beginning of the array
-names.unshift("Ken");//single element
-console.log(names);
-names.unshift("Sonu", "Titu", "Kittu");//multiple element
-console.log(names);
-
-//3. at any specific index
-const colours: string[] = ['Blue', 'Orange', 'Red'];
-const deletedColours: string[] = colours.splice(1, 1, 'Green', 'Yellow');
-console.log(colours)
-console.log(deletedColours);
-
-//4. Usong concat method
-let  realHeros: string[] = ['Bhagat', 'Rajguru', 'Sukhdev'];
-let Personalities: string[] = [].concat('Salman', realHeros, 'Ajay');
-console.log(realHeros);
-console.log(Personalities);
-//Deletion from array
-// console.log(names.pop());
-// console.log(names)
-
+//2. at() method: it takes integer value and returns the item at that index. Accepts both positive and negative values.
+console.log(array1.at(2));
